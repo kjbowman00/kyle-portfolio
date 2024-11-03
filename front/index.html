@@ -8,6 +8,26 @@
     <title>Kyle Bowman</title>
   </head>
   <body>
+    <header class="bg-slate-500 inset-3">
+      <div class="float-left">Kyle Bowman</div>
+
+      <div class="sm:hidden float-right"><button>
+        <svg v-if="navopen" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="5" width="18" height="2" fill="currentColor"/>
+          <rect x="3" y="11" width="18" height="2" fill="currentColor"/>
+          <rect x="3" y="17" width="18" height="2" fill="currentColor"/>
+        </svg>
+        <svg hidden width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 8L6 14H18L12 8Z" fill="currentColor"/>
+        </svg>
+      </button></div>
+      <br>
+      <nav class="flex flex-col">
+        <a>Work Experience</a>
+        <a>About</a>
+      </nav>
+    </header>
+
     <p class="text-red-400">Hi there world</p>
     <script type="module" src="/src/main.ts"></script>
   </body>
