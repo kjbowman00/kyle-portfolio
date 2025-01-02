@@ -11,20 +11,20 @@
     <!-- Navigation Bar -->
     <nav class="flex items-center justify-between bg-white px-4 py-3 shadow-md">
       <div class="text-lg font-bold">Kyle Bowman</div>
-      <div id="menu-btn" class="block md:hidden cursor-pointer">
+      <div id="menu-btn" class="block md:hidden">
         <svg class="w-6 h-6 text-gray-800" aria-hidden="true" width="24" height="24" fill="none" viewBox="0 0 24 24">
           <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/>
+        </svg>
+      </div>
+      <div id="close-menu" class="hidden md:hidden">
+        <svg class="w-6 h-6 text-gray-800" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/>
         </svg>
       </div>
     </nav>
 
     <!-- Dropdown Menu -->
     <div id="dropdown" class="hidden bg-white shadow-md w-full absolute">
-      <!-- <button id="close-menu" class="flex justify-end p-2 text-gray-500">
-        <svg class="w-6 h-6 text-gray-800" width="24" height="24" fill="none" viewBox="0 0 24 24">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 15 7-7 7 7"/>
-        </svg>
-      </button> -->
 
       <ul class="text-center text-gray-700 items-center ">
         <li class="py-2 hover:bg-gray-200 text-2xl"><a href="#about">About</a></li>
@@ -88,9 +88,13 @@
     <!-- JavaScript to Toggle Menu -->
     <script>
       document.getElementById("menu-btn").onclick = function() {
+        this.classList.toggle("hidden");
+        document.getElementById("close-menu").classList.toggle("hidden");
         document.getElementById("dropdown").classList.toggle("hidden");
       }
       document.getElementById("close-menu").onclick = function() {
+        this.classList.toggle("hidden");
+        document.getElementById("menu-btn").classList.toggle("hidden");
         document.getElementById("dropdown").classList.add("hidden");
       }
     </script>
